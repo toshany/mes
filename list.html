@@ -116,79 +116,304 @@
 
     <!-- Main Content -->
     <div class="main-content" id="mainContent">
+        <!-- Filters Row -->
+        <div class="filters-container">
+            <div class="filter-left">
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle filter-btn" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-chevron-down me-2"></i>
+                        Sort by Date
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Newest First</a></li>
+                        <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-center">
+                <button class="btn btn-primary filter-icon-btn">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+            <div class="filter-right">
+                <select class="form-select filter-select">
+                    <option>Department</option>
+                    <option>Information and Communication Systems</option>
+                    <option>Operations Department</option>
+                    <option>Training Department</option>
+                </select>
+                <select class="form-select filter-select">
+                    <option>Officer</option>
+                    <option>Fahad Ahamed Ali Rashid</option>
+                    <option>Hassan Mohammed</option>
+                    <option>Ahmed Al Mannai</option>
+                </select>
+                <input type="text" class="form-control filter-input" placeholder="Date range" />
+                <button class="btn btn-primary filter-apply-btn">Filter</button>
+            </div>
+        </div>
 
-
-        <div class="list-page">
-            <!-- Filters Row -->
-            <div class="filters d-flex align-items-center justify-content-between mb-4">
-                <div class="d-flex align-items-center gap-2">
+        <!-- Activities List -->
+        <div class="activities-list">
+            <!-- Activity Item 1 - Pending Approval -->
+            <div class="activity-item">
+                <div class="activity-actions">
                     <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            Sort by Date
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Newest First</a></li>
-                            <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="d-flex align-items-center gap-2">
-                    <button class="btn btn-light">
-                        <i class="bi bi-funnel"></i>
-                    </button>
-                    <select class="form-select">
-                        <option>Department</option>
-                    </select>
-                    <select class="form-select">
-                        <option>Officer</option>
-                    </select>
-                    <input type="date" class="form-control" />
-                    <button class="btn btn-primary">Filter</button>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge pending">Pending Approval</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Special Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
                 </div>
             </div>
 
-            <!-- List Items -->
-            <div class="item-card p-3 mb-3">
-                <div class="row align-items-center">
-                    <div class="col-md-2 d-flex align-items-center gap-2">
-                        <div class="dropdown">
-                            <button class="btn btn-light" type="button" data-bs-toggle="dropdown">
-                                <i class="bi bi-three-dots"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit Schedule</a>
-                                </li>
-                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Delete</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-x-circle"></i> Cancel</a></li>
-                            </ul>
-                        </div>
-                        <span class="badge status-badge pending">Pending Approval</span>
+            <!-- Activity Item 2 - Draft -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-3">
-                        <small class="text-muted d-block">Officer in Charge</small>
-                        <strong>Fahad Ahamed Ali Rashid</strong>
-                    </div>
-                    <div class="col-md-3">
-                        <small class="text-muted d-block">Department</small>
-                        <span>Information and Communication Systems Department</span>
-                    </div>
-                    <div class="col-md-2">
-                        <strong>Special Training</strong>
-                        <div class="text-muted small">5 days Special training for officer cadets</div>
-                    </div>
-                    <div class="col-md-2 text-end">
-                        <strong class="date-day">Sunday<br>14</strong>
-                        <div class="text-muted small">April, 2025</div>
-                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge draft">Draft</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Readiness Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
                 </div>
             </div>
 
-            <!-- Duplicate item-card div for other statuses (Draft, Approved, etc.) -->
+            <!-- Activity Item 3 - Approved -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge approved">Approved</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Ticktacks and Strategy Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">March, 2025</span>
+                </div>
+            </div>
+
+            <!-- Activity Item 4 - Approved -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge approved">Approved</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Mission Management Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
+                </div>
+            </div>
+
+            <!-- Activity Item 5 - Approved with context menu shown -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu show">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge approved">Approved</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">March third week Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
+                </div>
+            </div>
+
+            <!-- Activity Item 6 - Approved -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge approved">Approved</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Special Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
+                </div>
+            </div>
+
+            <!-- Activity Item 7 - Approved -->
+            <div class="activity-item">
+                <div class="activity-actions">
+                    <div class="dropdown">
+                        <button class="btn btn-link action-menu" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit Schedule</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-status">
+                    <span class="status-label">Status</span>
+                    <span class="status-badge approved">Approved</span>
+                </div>
+                <div class="activity-officer">
+                    <span class="field-label">Officer in Charge</span>
+                    <span class="field-value">Fahad Ahamed Ali Rashid</span>
+                </div>
+                <div class="activity-department">
+                    <span class="field-label">Department</span>
+                    <span class="field-value">Information and Communication Systems Department</span>
+                </div>
+                <div class="activity-training">
+                    <span class="training-title">Special Training</span>
+                    <span class="training-description">5 days Special training for officer cadets</span>
+                </div>
+                <div class="activity-date">
+                    <span class="date-day">Sunday</span>
+                    <span class="date-number">14</span>
+                    <span class="date-month">April, 2025</span>
+                </div>
+            </div>
         </div>
-
-
-
     </div>
     <!-- /. Main-content ends here-->
 
